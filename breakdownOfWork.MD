@@ -1,4 +1,4 @@
-October 25th
+//October 25th//
 Jimmy Lee:
 I worked on the following tasks:
 1. Chose delete reminder's task - For deleting reminder
