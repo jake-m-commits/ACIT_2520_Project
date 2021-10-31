@@ -1,6 +1,7 @@
 //October 25th//
 
 Jimmy Lee:
+
 I worked on the following tasks:
 1. Chose delete reminder's task - For deleting reminder
 <Insert Some Task Here> - This task is responsible for xyz functionality.
@@ -8,6 +9,7 @@ I also needed to research on Youtube and Google the following things:
 1. Begin watching reminder app videos
 
 Jake Martin:
+  
 I worked on the following tasks:
 1. Chose edit reminder's task - For editing reminder
 <Insert Some Task Here> - This task is responsible for xyz functionality.
@@ -19,6 +21,7 @@ I also needed to research on Youtube and Google the following things:
 //October 31st//
   
 Jimmy Lee:
+  
 I worked on the following tasks:
 1. Completed deleting functionality in reminder (implemented using different ways) - Delete Reminder
 2. Finished watching videos for week 8
