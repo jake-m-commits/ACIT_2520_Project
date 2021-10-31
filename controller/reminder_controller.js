@@ -47,14 +47,12 @@ let remindersController = {
   delete: (req, res) => {
     // Implement this code
     // Note: app.post("/reminder/delete/:id", reminderController.delete);
-    let reminderToDelete = req.params.id
-    let searchReminder = database.cindy.reminders.find(function(reminder){
-      return reminder.id == reminderToDelete;
+    let reminderId = req.params.id;
+    let reminderToDelete = database.cindy.reminders.filter(function(reminder){
+      return reminder.id != reminderId;
     });
-    database.cindy.reminders.splice(searchReminder);
-    res.redirect("/reminders");
-  },
-};
-
+    res.render("reminder/index", { reminders: reminderToDelete});
+    },
+  };
 
 module.exports = remindersController;
