@@ -15,10 +15,11 @@ I worked on the following tasks:
 I also needed to research on Youtube and Google the following things:
 1. <Insert Video or Link to thing you needed to research>
 
-October 31st
+//October 31st//
 Jimmy Lee:
 I worked on the following tasks:
 1. Completed deleting functionality in reminder (implemented using different ways) - Delete Reminder
+2. Finished watching videos for week 8
   
 I also needed to research on Youtube and Google the following things:
 1. Reminder App lecture recordings
