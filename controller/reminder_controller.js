@@ -55,7 +55,7 @@ let remindersController = {
     //console.log(reminderUpdated.id);
     //console.log(obj.id === reminderUpdated.id);
     //console.log(index);
-    console.log(req.body.completed);
+    //console.log(req.body.completed);
     database.cindy.reminders[index] = reminderUpdated;
     res.redirect("/reminders");
   },
