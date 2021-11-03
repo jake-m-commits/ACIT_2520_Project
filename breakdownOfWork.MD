@@ -53,4 +53,11 @@ I worked on the following tasks:
 I also needed to research on Youtube and Google the following things:
 1. Passport video from notion link [week9]
 
+Jimmy Lee:
 
+I worked on the following tasks:
+1. watching videos for passport through notion link
+
+I also needed to research on Youtube and Google the following things:
+1. http://www.passportjs.org/docs/
+2. https://www.freecodecamp.org/news/learn-how-to-handle-authentication-with-node-using-passport-js-4a56ed18e81e/
