@@ -41,3 +41,16 @@ I also needed to research on Youtube and Google the following things:
 4. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex   // to update specific objects
 5. https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging                           // These two for 
 6. https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging                           // merge conflict
+
+
+//November 2nd//
+
+Jake Martin:
+
+I worked on the following tasks:
+1. Merging passportStarter code from class with reminders app [Incomplete ~ WIP]
+
+I also needed to research on Youtube and Google the following things:
+1. Passport video from notion link [week9]
+
+
