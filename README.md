@@ -1,5 +1,9 @@
-# Term Project for ACIT 2520
+# Reminders App for ACIT 2520
+- Clone repo:
 
-`git clone https://github.com/jake-m-commits/ACIT_2520_Project`
+        git clone https://github.com/jake-m-commits/ACIT_2520_Project
 
-`npm install`
+
+- Install dependencies:
+
+        npm install
