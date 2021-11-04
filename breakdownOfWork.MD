@@ -61,3 +61,16 @@ I worked on the following tasks:
 I also needed to research on Youtube and Google the following things:
 1. http://www.passportjs.org/docs/
 2. https://www.freecodecamp.org/news/learn-how-to-handle-authentication-with-node-using-passport-js-4a56ed18e81e/
+
+
+//November 3rd//
+
+Jake Martin:
+
+I worked on the following tasks:
+1. Working towards passport handling our authentication [Incomplete ~ WIP]
+2. GitHub stuff to prevent future issues, mostly protecting the main branch
+
+I also needed to research on Youtube and DuckDuckGo the following things:
+1. https://docs.github.com/en
+2. Images from notion link
