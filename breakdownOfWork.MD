@@ -79,7 +79,7 @@ I also needed to research on Youtube and DuckDuckGo the following things:
 
 Jake Martin:
 
-I worked on the follwoing tasks:
+I worked on the following tasks:
 1. I think I got passport to handle authentication. Working on updating old reminder funcitons to work with our "new" database. (I console logged almost every function to help me understand it a bit better.)
 
 I also needed to research on Youtube and Google the following things:
@@ -87,3 +87,16 @@ I also needed to research on Youtube and Google the following things:
 2. Images from slack
 3. Content from Notion link (Video and Notes)
 4. https://stackoverflow.com/questions/10695629/what-is-the-parameter-next-used-for-in-express
+
+
+//November 6th//
+
+Jake Martin:
+
+I worked on the following tasks:
+1. Update reminder functions to work with the authenticated user (user can create, edit, update, delete).
+
+I also needed to research the following things:
+1. Review code from passportStarter directory
+2. Content from Notion link (Video)
+
