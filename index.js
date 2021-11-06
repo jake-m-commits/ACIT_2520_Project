@@ -5,7 +5,7 @@ const path = require("path");
 const port = process.env.port || 3001;
 const authController = require("./controller/auth_controller");
 const reminderController = require("./controller/reminder_controller");
-const userController = require("./controller/userController");
+//const userController = require("./controller/userController");
 
 const app = express();
 
@@ -71,10 +71,10 @@ app.post(
 //app.use("/auth", authRoute);
 
 // Fix this to work with passport! The registration does not need to work, you can use the fake database for this.
-app.get("/register", authController.register); // forwardAuthenticated
-app.get("/login", authController.login);
-app.post("/register", authController.registerSubmit);
-app.post("/login", authController.loginSubmit);
+app.get("/register", forwardAuthenticated, authController.register);
+app.get("/login", forwardAuthenticated, authController.login);
+app.post("/register", forwardAuthenticated, authController.registerSubmit);
+app.post("/login", forwardAuthenticated, authController.loginSubmit);
 
 //app.post(
 //  "/login",
