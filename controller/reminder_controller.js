@@ -13,11 +13,11 @@ let remindersController = {
   listOne: (req, res) => {
     let reminderToFind = req.params.id;
     //console.log(req);
-    console.log(req.params.id);
+    //console.log(req.params.id);
     let searchResult = req.user.reminders.find(function (reminder) {
       return reminder.id == reminderToFind;
     });
-    console.log(searchResult);
+    //console.log(searchResult);
     if (searchResult != undefined) {
       res.render("reminder/single-reminder", { reminderItem: searchResult });
     } else {
