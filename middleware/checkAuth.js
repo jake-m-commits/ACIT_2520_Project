@@ -3,12 +3,14 @@ module.exports = {
    * I will look more at this redirecting next time. */
 
   ensureAuthenticated: function (req, res, next) {
+    console.log("ensureAuthenticated called...");
     if (req.isAuthenticated()) {
       return next();
     }
-    res.redirect("auth/login");
+    res.redirect("/login");
   },
   forwardAuthenticated: function (req, res, next) {
+    console.log("forwardAuthenticated called...");
     if (!req.isAuthenticated()) {
       return next();
     }
