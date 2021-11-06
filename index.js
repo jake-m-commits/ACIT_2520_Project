@@ -79,8 +79,8 @@ app.post("/login", authController.loginSubmit);
 //app.post(
 //  "/login",
 //  passport.authenticate("local", {
-//    successRedirect: "/reminders",
-//    failureRedirect: "auth/login",
+//    successRedirect: "/loginSubmit",
+//    failureRedirect: "/login",
 //  })
 //);
 
