@@ -74,3 +74,15 @@ I worked on the following tasks:
 I also needed to research on Youtube and DuckDuckGo the following things:
 1. https://docs.github.com/en
 2. Images from notion link
+
+//November 5th//
+
+Jake Martin:
+
+I worked on the follwoing tasks:
+1. I think I got passport to handle authentication. Working on updating old reminder funcitons to work with our "new" database. (I console logged almost every function to help me understand it a bit better.)
+
+I also needed to research on Youtube and Google the following things:
+1. http://www.passportjs.org/docs/authenticate/       //passport docs
+2. Images from slack
+3. Content from Notion link (Video and Notes)
