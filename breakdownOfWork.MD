@@ -86,3 +86,4 @@ I also needed to research on Youtube and Google the following things:
 1. http://www.passportjs.org/docs/authenticate/       //passport docs
 2. Images from slack
 3. Content from Notion link (Video and Notes)
+4. https://stackoverflow.com/questions/10695629/what-is-the-parameter-next-used-for-in-express
