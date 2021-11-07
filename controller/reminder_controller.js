@@ -42,26 +42,25 @@ let remindersController = {
 
   update: (req, res) => {
     let reminderToFind = req.params.id;
+    if (req.body.completed === "false") {
+      boolOption = false;
+    } else {
+      boolOption = true;
+    }
     let reminderUpdated = {
       id: parseInt(reminderToFind),
       title: req.body.title,
       description: req.body.description,
-      completed: Boolean(req.body.completed),
+      completed: boolOption,
     };
     let index = database.cindy.reminders.findIndex(
       (obj) => obj.id === reminderUpdated.id
     );
-    //console.log(obj.id);
-    //console.log(reminderUpdated.id);
-    //console.log(obj.id === reminderUpdated.id);
-    //console.log(index);
-    //console.log(req.body.completed);
     database.cindy.reminders[index] = reminderUpdated;
     res.redirect("/reminders");
   },
 
   delete: (req, res) => {
-    // Implement this code
     // Note: app.post("/reminder/delete/:id", reminderController.delete);
     let reminderId = req.params.id;
     let indexOfReminder = database.cindy.reminders.findIndex(
