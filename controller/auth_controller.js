@@ -1,4 +1,5 @@
-let database = require("../database");
+//const database = require("../models/userModel");
+const passport = require("../middleware/passport");
 
 let authController = {
   login: (req, res) => {
@@ -10,7 +11,11 @@ let authController = {
   },
 
   loginSubmit: (req, res) => {
-    // implement
+    console.log("loginSubmit called...");
+    passport.authenticate("local", {
+      successRedirect: "/reminders",
+      failureRedirect: "/login",
+    })(req, res); // This is odd and needs some looking into.
   },
 
   registerSubmit: (req, res) => {
