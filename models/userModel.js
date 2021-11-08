@@ -8,6 +8,7 @@ let Database = [
       { id: 1, title: "abc", description: "abcabc", completed: false },
     ],
     role: "user",
+    profileImage: null,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ let Database = [
     password: "alex123!",
     reminders: [],
     role: "user",
+    profileImage: null,
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ let Database = [
     password: "jake123!",
     reminders: [],
     role: "admin",
+    profileImage: null,
   },
   {
     id: 4,
@@ -32,6 +35,7 @@ let Database = [
     password: "jimmy123!",
     reminders: [],
     role: "admin",
+    profileImage: null,
   },
 ];
 
