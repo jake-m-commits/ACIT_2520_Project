@@ -22,12 +22,10 @@ let authController = {
   registerSubmit: (req, res) => {
   },
 
-
 logout: (req, res) => {
   req.logout();
-  res.redirect("/auth/login");
+  res.redirect("/index.html");
   }
-}
-
+};
 
 module.exports = authController;

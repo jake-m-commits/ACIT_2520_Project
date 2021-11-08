@@ -29,6 +29,7 @@ const {
   ensureAuthenticated,
   forwardAuthenticated,
 } = require("./middleware/checkAuth");
+const { allowedNodeEnvironmentFlags } = require("process");
 //const authRoute = require("./routes/authRoute");
 //const indexRoute = require("./routes/indexRoute");
 
@@ -75,7 +76,7 @@ app.get("/register", forwardAuthenticated, authController.register);
 app.get("/login", forwardAuthenticated, authController.login);
 app.post("/register", forwardAuthenticated, authController.registerSubmit);
 app.post("/login", forwardAuthenticated, authController.loginSubmit);
-
+app.get("/logout", authController.logout)
 //app.post(
 //  "/login",
 //  passport.authenticate("local", {
