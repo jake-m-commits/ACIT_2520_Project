@@ -28,6 +28,8 @@ let authController = {
       email: req.body.email,
       password: req.body.password,
       reminders: [],
+      role: "user",
+      profileImage: null,
     };
     database.push(newUser);
     res.redirect("/login");
