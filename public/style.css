@@ -134,3 +134,12 @@ footer.footer {
   margin-bottom: 10px;
   margin-top: 10px;
 }
+
+.cancel {
+  background: lightcoral;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 11px;
+}
