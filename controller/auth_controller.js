@@ -1,5 +1,6 @@
 //const database = require("../models/userModel");
 const passport = require("../middleware/passport");
+const { forwardAuthenticated } = require("../middleware/checkAuth");
 
 let authController = {
   login: (req, res) => {
@@ -19,8 +20,14 @@ let authController = {
   },
 
   registerSubmit: (req, res) => {
-    // implement
   },
-};
+
+
+logout: (req, res) => {
+  req.logout();
+  res.redirect("/auth/login");
+  }
+}
+
 
 module.exports = authController;
