@@ -100,12 +100,24 @@ I also needed to research the following things:
 1. Review code from passportStarter directory
 2. Content from Notion link (Video)
 
+Jimmy Lee:
+
+I worked on the following tasks:
+1. Completed watching video and continue working on login page and registration
+
+I also needed to research the following things:
+1. Review code from passportStarter directory
+2. Content from Notion link (Video)
+
+
 //November 7th//
 
 Jimmy Lee:
 
 I worked on the following tasks:
 1. Added reminder logout functionality - logout
+2. Registration feature 
+3. Adding buttons to direct to certain pages, register to login, vice-versa
 
 I also needed to research the following things:
 1. Review code from passportStarter directory
