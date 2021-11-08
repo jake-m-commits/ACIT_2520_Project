@@ -100,3 +100,14 @@ I also needed to research the following things:
 1. Review code from passportStarter directory
 2. Content from Notion link (Video)
 
+//November 7th//
+
+Jimmy Lee:
+
+I worked on the following tasks:
+1. Added reminder logout functionality (button and new logout.ejs)
+
+I also needed to research the following things:
+1. Review code from passportStarter directory
+2. Notion link video (authentication project milestone)
+3. https://codebun.com/login-and-logout-in-nodejs-expressjs-and-mongodb/ # used to understand login and logout logic
