@@ -30,7 +30,6 @@ let authController = {
       reminders: [],
     };
     database.push(newUser);
-    console.log(database); // just to verify that new users are good
     res.redirect("/login");
   },
 
