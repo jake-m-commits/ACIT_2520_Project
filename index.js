@@ -5,7 +5,6 @@ const path = require("path");
 const port = process.env.port || 3001;
 const authController = require("./controller/auth_controller");
 const reminderController = require("./controller/reminder_controller");
-//const userController = require("./controller/userController");
 
 const app = express();
 
@@ -29,9 +28,6 @@ const {
   ensureAuthenticated,
   forwardAuthenticated,
 } = require("./middleware/checkAuth");
-const { allowedNodeEnvironmentFlags } = require("process");
-//const authRoute = require("./routes/authRoute");
-//const indexRoute = require("./routes/indexRoute");
 
 app.use(express.json());
 app.use(ejsLayouts);
@@ -68,22 +64,11 @@ app.post(
   reminderController.delete
 );
 
-//app.use("/", indexRoute);
-//app.use("/auth", authRoute);
-
-// Fix this to work with passport! The registration does not need to work, you can use the fake database for this.
-app.get("/register", forwardAuthenticated, authController.register);
+app.get("/register", authController.register);
 app.get("/login", forwardAuthenticated, authController.login);
-app.post("/register", forwardAuthenticated, authController.registerSubmit);
+app.post("/register", authController.registerSubmit);
 app.post("/login", forwardAuthenticated, authController.loginSubmit);
-app.get("/logout", authController.logout)
-//app.post(
-//  "/login",
-//  passport.authenticate("local", {
-//    successRedirect: "/loginSubmit",
-//    failureRedirect: "/login",
-//  })
-//);
+app.get("/logout", authController.logout);
 
 app.listen(port, function () {
   console.log(`🚀 Server has started on port ${port}`);

@@ -1,9 +1,10 @@
-//const database = require("../models/userModel");
+const database = require("../models/userModel").Database;
 const passport = require("../middleware/passport");
-const { forwardAuthenticated } = require("../middleware/checkAuth");
 
 let authController = {
   login: (req, res) => {
+    console.log(database);
+    // makes it easier to see what is happening in the background
     res.render("auth/login");
   },
 
@@ -20,12 +21,23 @@ let authController = {
   },
 
   registerSubmit: (req, res) => {
+    console.log("registerSubmit called...");
+    let newUser = {
+      id: database.length + 1,
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+      reminders: [],
+    };
+    database.push(newUser);
+    console.log(database); // just to verify that new users are good
+    res.redirect("/login");
   },
 
-logout: (req, res) => {
-  req.logout();
-  res.redirect("/index.html");
-  }
+  logout: (req, res) => {
+    req.logout();
+    res.redirect("/");
+  },
 };
 
 module.exports = authController;

@@ -1,5 +1,3 @@
-let database = require("../models/userModel").Database;
-
 let remindersController = {
   list: (req, res) => {
     console.log(req.user);
