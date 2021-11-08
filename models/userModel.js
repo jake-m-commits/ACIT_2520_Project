@@ -7,6 +7,7 @@ let Database = [
     reminders: [
       { id: 1, title: "abc", description: "abcabc", completed: false },
     ],
+    role: "user",
   },
   {
     id: 2,
@@ -14,6 +15,23 @@ let Database = [
     email: "alex@gmail.com",
     password: "alex123!",
     reminders: [],
+    role: "user",
+  },
+  {
+    id: 3,
+    name: "Jake",
+    email: "jake@gmail.com",
+    password: "jake123!",
+    reminders: [],
+    role: "admin",
+  },
+  {
+    id: 4,
+    name: "Jimmy",
+    email: "jimmy@gmail.com",
+    password: "jimmy123!",
+    reminders: [],
+    role: "admin",
   },
 ];
 
