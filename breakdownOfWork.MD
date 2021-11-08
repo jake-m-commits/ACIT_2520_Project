@@ -105,7 +105,7 @@ I also needed to research the following things:
 Jimmy Lee:
 
 I worked on the following tasks:
-1. Added reminder logout functionality (button and new logout.ejs)
+1. Added reminder logout functionality - logout
 
 I also needed to research the following things:
 1. Review code from passportStarter directory
