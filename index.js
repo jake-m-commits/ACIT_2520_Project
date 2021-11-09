@@ -9,6 +9,7 @@ const passport = require("./middleware/passport");
 const {
   ensureAuthenticated,
   forwardAuthenticated,
+  isAdmin,
 } = require("./middleware/checkAuth");
 const app = express();
 
@@ -73,6 +74,9 @@ app.get("/logout", authController.logout);
 // GitHub routes
 app.get("/auth/github", authController.gitLogin);
 app.get("/auth/github/callback", authController.gitCallBack);
+
+// Admin routes
+app.get("/admin", isAdmin, authController.admin);
 
 app.listen(port, function () {
   console.log(`🚀 Server has started on port ${port}`);

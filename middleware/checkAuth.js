@@ -13,4 +13,11 @@ module.exports = {
     }
     res.redirect("/reminders");
   },
+  isAdmin: (req, res, next) => {
+    console.log("isAdmin called...");
+    if (req.isAuthenticated() && req.user.role === "admin") {
+      return next();
+    }
+    res.redirect("/login");
+  },
 };

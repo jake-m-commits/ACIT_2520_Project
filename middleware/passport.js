@@ -29,10 +29,8 @@ const GitHubLogin = new GitHubStrategy(
   },
   function (accessToken, refreshToken, profile, done) {
     console.log("GitHub strat called...");
-    //User.findOrCreate({ githubId: profile.id }, function (err, user) {
     let GitHubUser = userController.getUserByGitHubIdOrCreate(profile);
     return done(null, GitHubUser);
-    //});
   }
 );
 
