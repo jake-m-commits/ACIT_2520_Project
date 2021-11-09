@@ -136,6 +136,7 @@ Jake Martin:
 
 I worked on the following tasks:
 1. Completed GitHub social login
+2. Add route for admins
 
 I also needed to research the following things:
 1. https://www.passportjs.org/packages/passport-github2/
