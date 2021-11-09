@@ -128,3 +128,19 @@ Jake Martin:
 
 I worked on the following tasks:
 1. Complete registration feature, but users are not stored persistently.
+
+
+//November 8th//
+
+Jake Martin:
+
+I worked on the following tasks:
+1. Completed GitHub social login
+
+I also needed to research the following things:
+1. https://www.passportjs.org/packages/passport-github2/
+2. https://www.passportjs.org/docs/authenticate/  //details about (req, res) usage after passport.authenticate
+3. https://stackoverflow.com/questions/47170813/what-is-the-req-res-after-passport-authenticate-for  //details about same case from second link
+4. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch  //try+catch usage
+5. https://github.com/cfsghost/passport-github/blob/master/examples/login/app.js  //example of passport-github usage
+
