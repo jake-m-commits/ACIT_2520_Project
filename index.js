@@ -69,6 +69,7 @@ app.get("/login", forwardAuthenticated, authController.login);
 app.post("/register", authController.registerSubmit);
 app.post("/login", forwardAuthenticated, authController.loginSubmit);
 app.get("/logout", authController.logout);
+
 // GitHub routes
 app.get("/auth/github", authController.gitLogin);
 app.get("/auth/github/callback", authController.gitCallBack);
