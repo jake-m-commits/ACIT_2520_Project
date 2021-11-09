@@ -5,7 +5,11 @@ const path = require("path");
 const port = process.env.port || 3001;
 const authController = require("./controller/auth_controller");
 const reminderController = require("./controller/reminder_controller");
-
+const passport = require("./middleware/passport");
+const {
+  ensureAuthenticated,
+  forwardAuthenticated,
+} = require("./middleware/checkAuth");
 const app = express();
 
 app.set("view engine", "ejs");
@@ -23,18 +27,13 @@ app.use(
   })
 );
 
-const passport = require("./middleware/passport");
-const {
-  ensureAuthenticated,
-  forwardAuthenticated,
-} = require("./middleware/checkAuth");
-
 app.use(express.json());
 app.use(ejsLayouts);
 app.use(express.urlencoded({ extended: true })); //was false
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Session info for debugging
 app.use((req, res, next) => {
   console.log("-".repeat(40));
   console.log(`User details are: `);
@@ -47,7 +46,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Routes start here
+// Reminder routes
 app.get("/reminders", ensureAuthenticated, reminderController.list);
 app.get("/reminder/new", ensureAuthenticated, reminderController.new);
 app.get("/reminder/:id", ensureAuthenticated, reminderController.listOne);
@@ -64,11 +63,15 @@ app.post(
   reminderController.delete
 );
 
+// Registration + Login routes
 app.get("/register", authController.register);
 app.get("/login", forwardAuthenticated, authController.login);
 app.post("/register", authController.registerSubmit);
 app.post("/login", forwardAuthenticated, authController.loginSubmit);
 app.get("/logout", authController.logout);
+// GitHub routes
+app.get("/auth/github", authController.gitLogin);
+app.get("/auth/github/callback", authController.gitCallBack);
 
 app.listen(port, function () {
   console.log(`🚀 Server has started on port ${port}`);

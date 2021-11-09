@@ -4,7 +4,6 @@ const passport = require("../middleware/passport");
 let authController = {
   login: (req, res) => {
     console.log(database);
-    // makes it easier to see what is happening in the background
     res.render("auth/login");
   },
 
@@ -17,7 +16,7 @@ let authController = {
     passport.authenticate("local", {
       successRedirect: "/reminders",
       failureRedirect: "/login",
-    })(req, res); // This is odd and needs some looking into.
+    })(req, res);
   },
 
   registerSubmit: (req, res) => {
@@ -33,6 +32,21 @@ let authController = {
     };
     database.push(newUser);
     res.redirect("/login");
+  },
+
+  gitLogin: (req, res) => {
+    console.log("gitLogin called...");
+    passport.authenticate("github", {
+      scope: ["user:email"],
+    })(req, res);
+  },
+
+  gitCallBack: (req, res) => {
+    console.log("gitCallBack called...");
+    passport.authenticate("github", {
+      failureRedirect: "/login",
+      successRedirect: "/reminders",
+    })(req, res);
   },
 
   logout: (req, res) => {
