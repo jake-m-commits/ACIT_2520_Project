@@ -145,3 +145,17 @@ I also needed to research the following things:
 4. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch  //try+catch usage
 5. https://github.com/cfsghost/passport-github/blob/master/examples/login/app.js  //example of passport-github usage
 
+//November 14th//
+
+Jimmy Lee:
+
+I worked on the following tasks:
+1. Updated admins - auth_controller.js 
+2. Added admin.ejs, not functionable only formatted.
+3. Continued working on revoking button 
+
+I also needed to research the following things:
+1. https://expressjs.com/en/resources/middleware/session.html/ //more info on req.session
+2. https://stackoverflow.com/questions/23430077/why-req-session-saved-in-sessionstore-and-how-to-access-value-from-sessionstore //values in sessionstore
+3. https://medium.com/swlh/session-management-in-nodejs-using-redis-as-session-store-64186112aa9  //res.write
+
