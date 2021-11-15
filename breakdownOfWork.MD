@@ -158,4 +158,4 @@ I also needed to research the following things:
 1. https://expressjs.com/en/resources/middleware/session.html/ //more info on req.session
 2. https://stackoverflow.com/questions/23430077/why-req-session-saved-in-sessionstore-and-how-to-access-value-from-sessionstore //values in sessionstore
 3. https://medium.com/swlh/session-management-in-nodejs-using-redis-as-session-store-64186112aa9  //res.write
-
+4. https://www.codegrepper.com/code-examples/javascript/javascript+clear+session // details on clearing sessions
