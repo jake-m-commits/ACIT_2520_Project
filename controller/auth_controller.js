@@ -51,17 +51,20 @@ let authController = {
 
   admin: (req, res) => {
     // res.render("auth/admin");//path to admin ejs page
-    
+    revokeSession = () => {
+      sessionStorage.removeItem('req.sessionID')
+      console.log("You have removed session" )
+    }
+
     res.write('<h1> Dashboard </h1>')
     res.write('<p> Current Active Sessions: </p>')
     res.write('<p>SessionID: ' + req.sessionID + '</p>')
     res.write('<p>UserID: ' + database.length + '</p>')
-    res.end('<a href=' + '/' + '>Revoke Session </a>')
+    // res.end('<a href=' + '/' + '>Revoke Session </a>')
+
+    res.end('<input type="button" onclick="revokeSession()" value="Revoke Session">')
     
     console.log(req.sessionStore.sessions); //current sessions
-
-    //Still need to have revoke buttons specific to each session.
-
   },
 
   logout: (req, res) => {
