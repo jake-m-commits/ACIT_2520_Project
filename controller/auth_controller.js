@@ -52,18 +52,21 @@ let authController = {
   admin: (req, res) => {
     // res.render("auth/admin");//path to admin ejs page
     revokeSession = () => {
-      sessionStorage.removeItem('req.sessionID')
-      console.log("You have removed session" )
-    }
+      console.log("revokeSession called...");
+      sessionStorage.removeItem(req.user.id);
+      console.log("You have removed session");
+    };
 
-    res.write('<h1> Dashboard </h1>')
-    res.write('<p> Current Active Sessions: </p>')
-    res.write('<p>SessionID: ' + req.sessionID + '</p>')
-    res.write('<p>UserID: ' + database.length + '</p>')
+    res.write("<h1> Dashboard </h1>");
+    res.write("<p> Current Active Sessions: </p>");
+    res.write("<p>SessionID: " + req.sessionID + "</p>");
+    res.write("<p>UserID: " + req.user.id + "</p>");
     // res.end('<a href=' + '/' + '>Revoke Session </a>')
 
-    res.end('<input type="button" onclick="revokeSession()" value="Revoke Session">')
-    
+    res.end(
+      '<input type="button" onclick="revokeSession()" value="Revoke Session">'
+    );
+
     console.log(req.sessionStore.sessions); //current sessions
   },
 
