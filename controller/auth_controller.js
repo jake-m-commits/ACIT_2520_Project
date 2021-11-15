@@ -51,14 +51,16 @@ let authController = {
 
   admin: (req, res) => {
     // res.render("auth/admin");//path to admin ejs page
+    
     res.write('<h1> Dashboard </h1>')
+    res.write('<p> Current Active Sessions: </p>')
     res.write('<p>SessionID: ' + req.sessionID + '</p>')
     res.write('<p>UserID: ' + database.length + '</p>')
-
+    res.end('<a href=' + '/' + '>Revoke Session </a>')
+    
     console.log(req.sessionStore.sessions); //current sessions
-    //I think the line above gives all the info we need to revoke
-    //a session. We just gotta make a admin ejs page and find a way
-    //to have revoke buttons specific to each session.
+
+    //Still need to have revoke buttons specific to each session.
 
   },
 
