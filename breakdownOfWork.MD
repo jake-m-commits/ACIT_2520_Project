@@ -151,8 +151,8 @@ Jimmy Lee:
 
 I worked on the following tasks:
 1. Updated admins - auth_controller.js 
-2. Added admin.ejs, not functionable only formatted.
-3. Continued working on revoking button 
+2. Added admin.ejs, only formatted. (ended up deleting)
+3. revoking button, when onclick to reach revokesession function to clear session by ID (needs to be fixed)
 
 I also needed to research the following things:
 1. https://expressjs.com/en/resources/middleware/session.html/ //more info on req.session
