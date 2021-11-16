@@ -57,10 +57,18 @@ let authController = {
       console.log("You have removed session");
     };
 
-    res.write("<h1> Dashboard </h1>");
-    res.write("<p> Current Active Sessions: </p>");
-    res.write("<p>SessionID: " + req.sessionID + "</p>");
-    res.write("<p>UserID: " + req.user.id + "</p>");
+    for (let [key, value] of Object.entries(req.sessionStore.sessions)) {
+      console.log(key, value);
+      res.write("<h1> Dashboard </h1>");
+      res.write("<p> Current Active Sessions: </p>");
+      res.write("<p>SessionID: " + key + "</p>");
+      res.write("<p>UserID: " + value + "</p>");
+    }
+
+    // res.write("<h1> Dashboard </h1>");
+    // res.write("<p> Current Active Sessions: </p>");
+    // res.write("<p>SessionID: " + req.sessionID + "</p>");
+    // res.write("<p>UserID: " + req.user.id + "</p>");
     // res.end('<a href=' + '/' + '>Revoke Session </a>')
 
     res.end(
