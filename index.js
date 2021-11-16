@@ -8,19 +8,7 @@ const reminderController = require("./controller/reminder_controller");
 const passport = require("./middleware/passport");
 // const multer = require("multer");
 // const imgur = require("imgur");
-
-// const storage = multer.diskStorage({
-//   destination: "./uploads",
-//   filename: (req, file, callback) => {
-//     callback(
-//       null,
-//       file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-//     );
-//   },
-// });
-// const upload = multer({
-//   storage: storage,
-// });
+// const fs = require("fs");
 
 const {
   ensureAuthenticated,
@@ -53,16 +41,41 @@ app.use(passport.session());
 
 // Session info for debugging
 app.use((req, res, next) => {
-  console.log("-".repeat(40));
+  console.log("=".repeat(40));
   console.log(`User details are: `);
   console.log(req.body);
   console.log("Entire session object:");
   console.log(req.session);
   console.log(`Session details are: `);
   console.log(req.session.passport);
-  console.log("-".repeat(40));
+  console.log("=".repeat(40));
   next();
 });
+
+// IMAGE UPLOAD STARTER CODE
+// const storage = multer.diskStorage({
+//   destination: "./uploads",
+//   filename: (req, file, callback) => {
+//     callback(
+//       null,
+//       file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+//     );
+//   },
+// });
+// const upload = multer({
+//   storage: storage,
+// });
+
+// app.post("/uploads/", async (req, res) => {
+//   const file = req.files[0];
+//   try {
+//     const url = await imgur.uploadFile(`./uploads/${file.filename}`);
+//     res.json({ message: url.data.link });
+//     fs.unlinkSync(`./uploads/${file.filename}`);
+//   } catch (error) {
+//     console.log("Error: ", error);
+//   }
+// });
 
 // Reminder routes
 app.get("/reminders", ensureAuthenticated, reminderController.list);
