@@ -167,3 +167,4 @@ Jake Martin:
 
 I worked on the follwoing tasks:
 1. Viewing Armaan's video on uploading images via imgur
+2. Rip starter code from image upload video to work on later
