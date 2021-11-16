@@ -159,3 +159,11 @@ I also needed to research the following things:
 2. https://stackoverflow.com/questions/23430077/why-req-session-saved-in-sessionstore-and-how-to-access-value-from-sessionstore //values in sessionstore
 3. https://medium.com/swlh/session-management-in-nodejs-using-redis-as-session-store-64186112aa9  //res.write
 4. https://www.codegrepper.com/code-examples/javascript/javascript+clear+session // details on clearing sessions
+
+
+//November 15th//
+
+Jake Martin:
+
+I worked on the follwoing tasks:
+1. Viewing Armaan's video on uploading images via imgur
