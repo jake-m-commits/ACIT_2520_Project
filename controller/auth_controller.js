@@ -62,18 +62,17 @@ let authController = {
       res.write("<h1> Dashboard </h1>");
       res.write("<p> Current Active Sessions: </p>");
       res.write("<p>SessionID: " + key + "</p>");
-      res.write("<p>UserID: " + value + "</p>");
-    }
+      // Still needs to get user id
+      res.write("<p>UserID: " + req.session.passport["user"] + "</p>");
+      res.write(
+        '<input type="button" onclick="revokeSession()" value="Revoke Session">')
+    };
 
     // res.write("<h1> Dashboard </h1>");
     // res.write("<p> Current Active Sessions: </p>");
     // res.write("<p>SessionID: " + req.sessionID + "</p>");
     // res.write("<p>UserID: " + req.user.id + "</p>");
     // res.end('<a href=' + '/' + '>Revoke Session </a>')
-
-    res.end(
-      '<input type="button" onclick="revokeSession()" value="Revoke Session">'
-    );
 
     console.log(req.sessionStore.sessions); //current sessions
   },
