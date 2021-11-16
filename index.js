@@ -6,11 +6,28 @@ const port = process.env.port || 3001;
 const authController = require("./controller/auth_controller");
 const reminderController = require("./controller/reminder_controller");
 const passport = require("./middleware/passport");
+// const multer = require("multer");
+// const imgur = require("imgur");
+
+// const storage = multer.diskStorage({
+//   destination: "./uploads",
+//   filename: (req, file, callback) => {
+//     callback(
+//       null,
+//       file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+//     );
+//   },
+// });
+// const upload = multer({
+//   storage: storage,
+// });
+
 const {
   ensureAuthenticated,
   forwardAuthenticated,
   isAdmin,
 } = require("./middleware/checkAuth");
+
 const app = express();
 
 app.set("view engine", "ejs");
