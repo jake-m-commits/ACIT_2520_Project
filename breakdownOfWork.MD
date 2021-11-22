@@ -168,3 +168,16 @@ Jake Martin:
 I worked on the follwoing tasks:
 1. Viewing Armaan's video on uploading images via imgur
 2. Rip starter code from image upload video to work on later
+
+//November 21st//
+
+Jimmy Lee:
+
+I worked on the following tasks:
+1. Watched: Uploading Images to your Application Video
+2. Researched more on Prisma
+
+I also needed to research the following things:
+1. https://www.howtographql.com/graphql-js/4-adding-a-database/ //understanding prisma 
+2. https://www.freecodecamp.org/news/build-nodejs-database-using-prisma-orm/ // Reviewed examples of building database
+
