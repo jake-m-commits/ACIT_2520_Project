@@ -20,6 +20,7 @@
     "express": "^4.14.0",
     "express-ejs-layouts": "^2.2.0",
     "express-session": "^1.17.2",
+    "fetch": "^1.1.0",
     "imgur": "^1.0.2",
     "method-override": "^2.3.7",
     "mongoose": "^4.7.7",

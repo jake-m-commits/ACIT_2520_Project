@@ -9,6 +9,22 @@ const passport = require("./middleware/passport");
 const multer = require("multer");
 const imgur = require("imgur");
 const fs = require("fs");
+// const fetch = require("fetch");
+
+// gotta move content from index.ejs to its own profiles page
+// IMAGE UPLOAD STARTER CODE
+const storage = multer.diskStorage({
+  destination: "./uploads",
+  filename: (req, file, callback) => {
+    callback(
+      null,
+      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+    );
+  },
+});
+const upload = multer({
+  storage: storage,
+});
 
 const {
   ensureAuthenticated,
@@ -52,21 +68,8 @@ app.use(passport.session());
 //   next();
 // });
 
-// IMAGE UPLOAD STARTER CODE
-const storage = multer.diskStorage({
-  destination: "./uploads",
-  filename: (req, file, callback) => {
-    callback(
-      null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    );
-  },
-});
-const upload = multer({
-  storage: storage,
-});
-
-app.post("/reminders/uploads/", async (req, res) => {
+// IMAGE UPLOADS TO IMGUR
+app.post("/uploads/", async (req, res) => {
   console.log("Uploading to imgur...");
   const file = req.files[0];
   try {
