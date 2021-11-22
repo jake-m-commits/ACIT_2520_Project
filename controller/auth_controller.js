@@ -53,8 +53,14 @@ let authController = {
     // res.render("auth/admin");//path to admin ejs page
     revokeSession = () => {
       console.log("revokeSession called...");
-      sessionStorage.removeItem(req.user.id);
-      console.log("You have removed session");
+      // sessionStorage.removeItem(req.user.id);
+      req.session.destroy(function(err){
+        if (err) {
+          console.log(err)
+        }else{
+          console.log("You have removed session");
+        }
+      })
     };
 
     for (let [key, value] of Object.entries(req.sessionStore.sessions)) {
