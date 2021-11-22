@@ -3,7 +3,7 @@ const passport = require("../middleware/passport");
 
 let authController = {
   login: (req, res) => {
-    console.log(database);
+    // console.log(database);
     res.render("auth/login");
   },
 
@@ -12,7 +12,7 @@ let authController = {
   },
 
   loginSubmit: (req, res) => {
-    console.log("loginSubmit called...");
+    // console.log("loginSubmit called...");
     passport.authenticate("local", {
       successRedirect: "/reminders",
       failureRedirect: "/login",
@@ -20,7 +20,7 @@ let authController = {
   },
 
   registerSubmit: (req, res) => {
-    console.log("registerSubmit called...");
+    // console.log("registerSubmit called...");
     let newUser = {
       id: database.length + 1,
       name: req.body.name,
@@ -35,14 +35,14 @@ let authController = {
   },
 
   gitLogin: (req, res) => {
-    console.log("gitLogin called...");
+    // console.log("gitLogin called...");
     passport.authenticate("github", {
       scope: ["user:email"],
     })(req, res);
   },
 
   gitCallBack: (req, res) => {
-    console.log("gitCallBack called...");
+    // console.log("gitCallBack called...");
     passport.authenticate("github", {
       failureRedirect: "/login",
       successRedirect: "/reminders",
@@ -65,8 +65,9 @@ let authController = {
       // Still needs to get user id
       res.write("<p>UserID: " + req.session.passport["user"] + "</p>");
       res.write(
-        '<input type="button" onclick="revokeSession()" value="Revoke Session">')
-    };
+        '<input type="button" onclick="revokeSession()" value="Revoke Session">'
+      );
+    }
 
     // res.write("<h1> Dashboard </h1>");
     // res.write("<p> Current Active Sessions: </p>");

@@ -40,17 +40,17 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Session info for debugging
-app.use((req, res, next) => {
-  console.log("=".repeat(40));
-  console.log(`User details are: `);
-  console.log(req.body);
-  console.log("Entire session object:");
-  console.log(req.session);
-  console.log(`Session details are: `);
-  console.log(req.session.passport);
-  console.log("=".repeat(40));
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log("=".repeat(40));
+//   console.log(`User details are: `);
+//   console.log(req.body);
+//   console.log("Entire session object:");
+//   console.log(req.session);
+//   console.log(`Session details are: `);
+//   console.log(req.session.passport);
+//   console.log("=".repeat(40));
+//   next();
+// });
 
 // IMAGE UPLOAD STARTER CODE
 const storage = multer.diskStorage({

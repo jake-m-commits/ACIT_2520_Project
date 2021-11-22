@@ -11,7 +11,7 @@ const localLogin = new LocalStrategy(
     passwordField: "password",
   },
   (email, password, done) => {
-    console.log("localLogin called...");
+    // console.log("localLogin called...");
     const user = userController.getUserByEmailIdAndPassword(email, password);
     return user
       ? done(null, user)
@@ -28,19 +28,19 @@ const GitHubLogin = new GitHubStrategy(
     callbackURL: "http://localhost:3001/auth/github/callback",
   },
   function (accessToken, refreshToken, profile, done) {
-    console.log("GitHub strat called...");
+    // console.log("GitHub strat called...");
     let GitHubUser = userController.getUserByGitHubIdOrCreate(profile);
     return done(null, GitHubUser);
   }
 );
 
 passport.serializeUser(function (user, done) {
-  console.log("serializeUser called...");
+  // console.log("serializeUser called...");
   done(null, user.id);
 });
 
 passport.deserializeUser(function (id, done) {
-  console.log("deserializeUser called...");
+  // console.log("deserializeUser called...");
   let user = userController.getUserById(id);
   if (user) {
     done(null, user);
