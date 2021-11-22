@@ -58,6 +58,7 @@ let authController = {
         if (err) {
           console.log(err)
         }else{
+          res.redirect('/')
           console.log("You have removed session");
         }
       })
