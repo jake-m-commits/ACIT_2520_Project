@@ -6,9 +6,9 @@ const port = process.env.port || 3001;
 const authController = require("./controller/auth_controller");
 const reminderController = require("./controller/reminder_controller");
 const passport = require("./middleware/passport");
-// const multer = require("multer");
-// const imgur = require("imgur");
-// const fs = require("fs");
+const multer = require("multer");
+const imgur = require("imgur");
+const fs = require("fs");
 
 const {
   ensureAuthenticated,
@@ -35,7 +35,7 @@ app.use(
 
 app.use(express.json());
 app.use(ejsLayouts);
-app.use(express.urlencoded({ extended: true })); //was false
+app.use(express.urlencoded({ extended: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -53,29 +53,32 @@ app.use((req, res, next) => {
 });
 
 // IMAGE UPLOAD STARTER CODE
-// const storage = multer.diskStorage({
-//   destination: "./uploads",
-//   filename: (req, file, callback) => {
-//     callback(
-//       null,
-//       file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-//     );
-//   },
-// });
-// const upload = multer({
-//   storage: storage,
-// });
+const storage = multer.diskStorage({
+  destination: "./uploads",
+  filename: (req, file, callback) => {
+    callback(
+      null,
+      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+    );
+  },
+});
+const upload = multer({
+  storage: storage,
+});
 
-// app.post("/uploads/", async (req, res) => {
-//   const file = req.files[0];
-//   try {
-//     const url = await imgur.uploadFile(`./uploads/${file.filename}`);
-//     res.json({ message: url.data.link });
-//     fs.unlinkSync(`./uploads/${file.filename}`);
-//   } catch (error) {
-//     console.log("Error: ", error);
-//   }
-// });
+app.post("/reminders/uploads/", async (req, res) => {
+  console.log("Uploading to imgur...");
+  const file = req.files[0];
+  try {
+    const url = await imgur.uploadFile(`./uploads/${file.filename}`);
+    console.log(url);
+    res.render("reminder/index", { url: url });
+    res.json({ message: url.data.link });
+    fs.unlinkSync(`./uploads/${file.filename}`);
+  } catch (error) {
+    console.log("Error: ", error);
+  }
+});
 
 // Reminder routes
 app.get("/reminders", ensureAuthenticated, reminderController.list);
