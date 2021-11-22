@@ -72,7 +72,7 @@ app.post("/reminders/uploads/", async (req, res) => {
   try {
     const url = await imgur.uploadFile(`./uploads/${file.filename}`);
     console.log(url);
-    res.render("reminder/index", { url: url });
+    req.user[profileImage] = url;
     res.json({ message: url.data.link });
     fs.unlinkSync(`./uploads/${file.filename}`);
   } catch (error) {

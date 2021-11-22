@@ -1,17 +1,10 @@
 let remindersController = {
   list: (req, res) => {
-    console.log(req.user);
-    if (req.url) {
-      res.render("reminder/index", {
-        reminders: req.user.reminders,
-        url: req.url,
-      });
-    } else {
-      res.render("reminder/index", {
-        reminders: req.user.reminders,
-        url: null,
-      });
-    }
+    // console.log(req.user);
+    res.render("reminder/index", {
+      reminders: req.user.reminders,
+      profileImage: req.user.profileImage,
+    });
   },
 
   new: (req, res) => {

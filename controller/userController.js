@@ -2,7 +2,7 @@ const userModel = require("../models/userModel").userModel;
 const database = require("../models/userModel").Database;
 
 const getUserByEmailIdAndPassword = (email, password) => {
-  console.log("getUserByEmailIdAndPassword called...");
+  // console.log("getUserByEmailIdAndPassword called...");
   let user = userModel.findOne(email);
   if (user) {
     if (isUserValid(user, password)) {
@@ -13,7 +13,7 @@ const getUserByEmailIdAndPassword = (email, password) => {
 };
 
 const getUserByGitHubIdOrCreate = (profile) => {
-  console.log("getUserByGitHubIdOrCreate called...");
+  // console.log("getUserByGitHubIdOrCreate called...");
   try {
     let user = userModel.findById(profile.id);
     return user;
@@ -35,7 +35,7 @@ const getUserByGitHubIdOrCreate = (profile) => {
 };
 
 const getUserById = (id) => {
-  console.log("getUserById called...");
+  // console.log("getUserById called...");
   let user = userModel.findById(id);
   if (user) {
     return user;
@@ -44,7 +44,7 @@ const getUserById = (id) => {
 };
 
 function isUserValid(user, password) {
-  console.log("isUserValid called...");
+  // console.log("isUserValid called...");
   return user.password === password;
 }
 
