@@ -181,3 +181,11 @@ I also needed to research the following things:
 1. https://www.howtographql.com/graphql-js/4-adding-a-database/ //understanding prisma 
 2. https://www.freecodecamp.org/news/build-nodejs-database-using-prisma-orm/ // Reviewed examples of building database
 
+Jake Martin:
+
+I worked on the following tasks:
+1. Figuring out profile image uploads.
+
+I also needed to research the following things:
+1. Mainly the code from the "uploading images" video.
+
